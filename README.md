@@ -1,5 +1,5 @@
 # React_TodoList
-Simple Todo List Project build using JavaScript React Niggadale
+Simple Todo List Project build using JavaScript React Testint Git 
 =======
 # Getting Started with Create React App
 
