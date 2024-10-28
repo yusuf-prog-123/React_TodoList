@@ -30,17 +30,17 @@ function Nav() {
           <button className="ml-4 w-[100px]  bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"onClick={addtask}>Add</button>
       </div>
       <ol>
-        {task.map((eletask,index)=>
-            <li key={index} className='flex py-5 justify-between w-[500px]'>
-                <span>{index+1}. {eletask} </span> 
+        {task.map((eletask,eleindex)=>
+            <li key={eleindex} className='flex py-5 justify-between w-[500px]'>
+                <span>{eleindex+1}. {eletask} </span> 
                 <span className='flex'>
-                  <button  className="rounded-xl text-xl text-black px-4 py-2  hover:bg-violet-600"onClick= {mvtaskup(index)}>
+                  <button  className="rounded-xl text-xl text-black px-4 py-2  hover:bg-violet-600"onClick= {mvtaskup(eleindex)}>
                     <ImMoveUp/>
                   </button>
-                  <button  className="rounded-xl text-xl text-black px-4 py-2  hover:bg-violet-600"onClick= {mvtaskdown(index)}>
+                  <button  className="rounded-xl text-xl text-black px-4 py-2  hover:bg-violet-600"onClick= {mvtaskdown(eleindex)}>
                     <ImMoveDown/>
                   </button>  
-                  <button  className="rounded-xl text-xl  text-black px-4 py-2  hover:bg-red-600"onClick={deletetask(index)}>
+                  <button  className="rounded-xl text-xl  text-black px-4 py-2  hover:bg-red-600"onClick={deletetask(eleindex)}>
                     <MdDelete/>
                   </button>                                        
                 </span> 
