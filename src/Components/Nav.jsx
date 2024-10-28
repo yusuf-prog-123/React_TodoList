@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import logo from '../Asset/Logo.png'
 import { MdDelete } from "react-icons/md";
 import { ImMoveDown,ImMoveUp } from "react-icons/im";
 function Nav() {
