@@ -21,7 +21,13 @@ function Nav() {
     }
   }
   function deletetask(index){
-    const updatedtasks=(tasks => tasks.filter((_, i) => i !== index))
+    const updatedtasks=(tasks)=>{
+      const updatedTasks = tasks.filter(function(task, i) {
+        return i !== index;  // Only keep tasks that don’t match the `index` we want to remove
+      });
+      return updatedTasks
+    }
+  
     settask(updatedtasks);
 
   }
