@@ -21,8 +21,8 @@ function Nav() {
     }
   }
   function deletetask(index){
-    const updatedtasks=(tasks)=>{
-      const updatedTasks = tasks.filter(function(task, i) {
+    const updatedtasks=(curtasks)=>{
+      const updatedTasks = curtasks.filter(function(task, i) {
         return i !== index;  // Only keep tasks that don’t match the `index` we want to remove
       });
       return updatedTasks
@@ -31,8 +31,24 @@ function Nav() {
     settask(updatedtasks);
 
   }
-  function mvtaskup(index){}
-  function mvtaskdown(index){}
+  function mvtaskup(index){
+    if(index>0){
+      const updatedTasks = [...tasks];
+      /**Array Destructuring to sap 2 elements ithin an array */
+      [updatedTasks[index], updatedTasks[index - 1]] = [updatedTasks[index - 1], updatedTasks[index]];
+      settask(updatedTasks);
+
+    }
+  }
+  function mvtaskdown(index){
+    if(index < tasks.length - 1){
+      const updatedTasks = [...tasks];
+      /**Array Destructuring to sap 2 elements ithin an array */
+      [updatedTasks[index], updatedTasks[index + 1]] = [updatedTasks[index + 1], updatedTasks[index]];
+      settask(updatedTasks);
+    }
+
+  }
 
   return (
     <div className="flex flex-col items-center">
